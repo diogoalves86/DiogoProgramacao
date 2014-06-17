@@ -15,17 +15,3 @@ $this->menu=array(
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>
-
-<h1>View Post #<?php echo $model->id; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'idUser',
-		'title',
-		'message',
-		'creationTime',
-		'updateTime',
-	),
-)); ?>

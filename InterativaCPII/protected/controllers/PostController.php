@@ -154,7 +154,7 @@ class PostController extends Controller
 	{
 		$model=Post::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'A página solicitada não existe.');
 		return $model;
 	}
 

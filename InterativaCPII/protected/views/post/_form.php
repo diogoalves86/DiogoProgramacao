@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUser'); ?>
-		<?php echo $form->textField($model,'idUser'); ?>
-		<?php echo $form->error($model,'idUser'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'title'); ?>
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>400)); ?>
 		<?php echo $form->error($model,'title'); ?>
@@ -36,18 +30,7 @@
 		<?php echo $form->textArea($model,'message',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'message'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'creationTime'); ?>
-		<?php echo $form->textField($model,'creationTime'); ?>
-		<?php echo $form->error($model,'creationTime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'updateTime'); ?>
-		<?php echo $form->textField($model,'updateTime'); ?>
-		<?php echo $form->error($model,'updateTime'); ?>
-	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

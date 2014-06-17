@@ -3,27 +3,22 @@
 /* @var $data Post */
 ?>
 
-<div class="view">
+<div class="conteudo">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<div class="titulo">
+		<h2><?php echo CHtml::encode($data->title); ?></h2>
+		<?php echo CHtml::image($data->idImage, $data->title); ?>
+		
+	</div>
 	<br />
+	<div class="conteudo">
+		<?php echo $data->message; ?>
+		<br />
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUser')); ?>:</b>
-	<?php echo CHtml::encode($data->idUser); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
-	<?php echo CHtml::encode($data->title); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('message')); ?>:</b>
-	<?php echo CHtml::encode($data->message); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('creationTime')); ?>:</b>
-	<?php echo CHtml::encode($data->creationTime); ?>
-	<br />
+	<div class="data">
+		<p>Postado em:<?php echo CHtml::encode($data->creationTime); ?></p>
+	</div>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('updateTime')); ?>:</b>
 	<?php echo CHtml::encode($data->updateTime); ?>
