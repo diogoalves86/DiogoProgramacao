@@ -3,7 +3,7 @@
 /* @var $data Post */
 ?>
 
-<div class="conteudo">
+<div class="noticia">
 
 	<div class="titulo">
 		<h2><?php echo CHtml::encode($data->title); ?></h2>
