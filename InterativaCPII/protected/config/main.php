@@ -49,10 +49,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=InterativaCPII',
+			'connectionString' => 'mysql:host=localhost;dbname=interativacpii',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '123',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
