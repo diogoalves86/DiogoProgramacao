@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Post".
+ * This is the model class for table "post".
  *
- * The followings are the available columns in table 'Post':
+ * The followings are the available columns in table 'post':
  * @property integer $id
  * @property integer $idUser
  * @property string $title
@@ -21,7 +21,7 @@ class Post extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Post';
+		return 'post';
 	}
 
 	/**
@@ -32,7 +32,7 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, message', 'required'),
+			array('idUser, title, message, creationTime, updateTime', 'required'),
 			array('idUser', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>400),
 			// The following rule is used by search().
