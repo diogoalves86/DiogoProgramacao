@@ -1,11 +1,12 @@
 <?php
 
 /**
- * This is the model class for table "post".
+ * This is the model class for table "Post".
  *
- * The followings are the available columns in table 'post':
+ * The followings are the available columns in table 'Post':
  * @property integer $id
  * @property integer $idUser
+ * @property string $idImage
  * @property string $title
  * @property string $message
  * @property string $creationTime
@@ -21,7 +22,7 @@ class Post extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'post';
+		return 'Post';
 	}
 
 	/**
@@ -32,12 +33,12 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUser, title, message, creationTime, updateTime', 'required'),
+			array('idUser, idImage, title, message, creationTime, updateTime', 'required'),
 			array('idUser', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>400),
+			array('idImage, title', 'length', 'max'=>400),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, idUser, title, message, creationTime, updateTime', 'safe', 'on'=>'search'),
+			array('id, idUser, idImage, title, message, creationTime, updateTime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +62,7 @@ class Post extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'idUser' => 'Id User',
+			'idImage' => 'Id Image',
 			'title' => 'Title',
 			'message' => 'Message',
 			'creationTime' => 'Creation Time',
@@ -88,6 +90,7 @@ class Post extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('idUser',$this->idUser);
+		$criteria->compare('idImage',$this->idImage,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('message',$this->message,true);
 		$criteria->compare('creationTime',$this->creationTime,true);

@@ -11,6 +11,9 @@
  * @property string $password
  * @property string $creationTime
  * @property string $updateTime
+ *
+ * The followings are the available model relations:
+ * @property Post[] $posts
  */
 class User extends CActiveRecord
 {
@@ -47,6 +50,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'posts' => array(self::HAS_MANY, 'Post', 'idUser'),
 		);
 	}
 
