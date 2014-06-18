@@ -26,6 +26,16 @@
 	</div>
 
 	<div class="row">
+		<?php 
+		var_dump($users); exit();
+		?>
+		<?php for ($i=0; $i < count($users); $i++):?>
+			<?php echo CHtml::dropDown('dropUsers', 'select', $users[$i]); ?>
+
+		<?php endfor; ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'message'); ?>
 		<?php echo $form->textArea($model,'message',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'message'); ?>

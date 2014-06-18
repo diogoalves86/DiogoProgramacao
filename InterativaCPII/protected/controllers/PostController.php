@@ -63,6 +63,8 @@ class PostController extends Controller
 	public function actionCreate()
 	{
 		$model=new Post;
+		$user = User::model()->findAll();
+		$users = $this->getNameOfUsers($user);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,12 +72,14 @@ class PostController extends Controller
 		if(isset($_POST['Post']))
 		{
 			$model->attributes=$_POST['Post'];
+			$model->setAttribute('creationTime', date("Y-m-d H:i:s"));
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'users'=>$users,
 		));
 	}
 
@@ -169,5 +173,15 @@ class PostController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	private function getNameOfUsers($user){
+		
+		$userList = array();
+		$count = count($user);
+		for ($i=0; $i < $count; $i++) { 
+			$user[$i]['name'] = $userList[$i];
+		}
+		return $userList;
 	}
 }
