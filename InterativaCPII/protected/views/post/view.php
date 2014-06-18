@@ -15,11 +15,10 @@ $this->menu=array(
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>
-<div class="noticias">
 	<div class="noticia">
 
 		<div class="titulo">
-			<a href="/post/<?=$model->id;?>">
+			<a href="<?=Yii::app()->request->baseUrl;?>/index.php/post/<?=$model->id;?>">
 				<?php echo CHtml::image($model->idImage, $model->title, array('class'=>'imageTitle')); ?>
 				<h2><?php echo $model->title; ?></h2>
 			</a>
@@ -41,4 +40,3 @@ $this->menu=array(
 
 
 	</div>
-</div>

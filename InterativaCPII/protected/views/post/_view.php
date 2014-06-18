@@ -6,8 +6,10 @@
 <div class="noticia">
 
 	<div class="titulo">
-		<h2><?php echo CHtml::encode($data->title); ?></h2>
-		<?php echo CHtml::image($data->idImage, $data->title); ?>
+		<a href="<?=Yii::app()->request->baseUrl;?>/index.php/post/<?=$data->id;?>">
+			<?php echo CHtml::image($data->idImage, $data->title, array('class'=>'imageTitle')); ?>
+			<h2><?php echo $data->title; ?></h2>
+		</a>
 		
 	</div>
 	<br />
