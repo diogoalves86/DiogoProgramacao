@@ -15,3 +15,30 @@ $this->menu=array(
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>
+<div class="noticias">
+	<div class="noticia">
+
+		<div class="titulo">
+			<a href="/post/<?=$model->id;?>">
+				<?php echo CHtml::image($model->idImage, $model->title, array('class'=>'imageTitle')); ?>
+				<h2><?php echo $model->title; ?></h2>
+			</a>
+			
+		</div>
+		<br />
+		<div class="conteudo">
+			<?php echo $model->message; ?>
+			<br />
+		</div>
+
+		<div class="data">
+			<p>Postado em:<?php echo CHtml::encode($model->creationTime); ?></p>
+		</div>
+
+		<b><?php echo CHtml::encode($model->getAttributeLabel('updateTime')); ?>:</b>
+		<?php echo CHtml::encode($model->updateTime); ?>
+		<br />
+
+
+	</div>
+</div>

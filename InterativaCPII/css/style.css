@@ -105,15 +105,13 @@ body {
 
         .left_column{
             float:left;
-            width:720px;
-            margin-top:10px;
+            width:74%;
         }
         .right_column{
             margin-top:10px;
             margin-right:10px;
             float:left;
-            width:260px;
-            margin-left:10px;
+            width:250px;
 
         }
         .right_column .widget{
