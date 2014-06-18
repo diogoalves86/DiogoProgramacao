@@ -69,9 +69,10 @@ class PostController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Post']))
+		if(isset($_POST['Post']) && isset($_POST['comboUsers']))
 		{
 			$model->attributes=$_POST['Post'];
+			$model->setAttribute('idUser', $_POST['comboUsers']);
 			$model->setAttribute('creationTime', date("Y-m-d H:i:s"));
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -91,7 +92,7 @@ class PostController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$users[0] = User::model()->findByPk($model['idUser']);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -104,6 +105,7 @@ class PostController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'users'=>$users,
 		));
 	}
 
@@ -176,11 +178,10 @@ class PostController extends Controller
 	}
 
 	private function getNameOfUsers($user){
-		
 		$userList = array();
-		$count = count($user);
-		for ($i=0; $i < $count; $i++) { 
-			$user[$i]['name'] = $userList[$i];
+		for ($i=0; $i < count($user); $i++) { 
+			$userList[$i]['id'] = $user[$i]['id'];
+			$userList[$i]['name'] = $user[$i]['name'];
 		}
 		return $userList;
 	}

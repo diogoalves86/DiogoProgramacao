@@ -26,13 +26,11 @@
 	</div>
 
 	<div class="row">
-		<?php 
-		var_dump($users); exit();
-		?>
-		<?php for ($i=0; $i < count($users); $i++):?>
-			<?php echo CHtml::dropDown('dropUsers', 'select', $users[$i]); ?>
-
-		<?php endfor; ?>
+		<select name="comboUsers">
+			<?php for ($i=0; $i < count($users); $i++):?>
+				<option value="<?=$users[$i]['id']; ?>"><?=$users[$i]['name']; ?></option>
+			<?php endfor; ?>
+		</select>
 	</div>
 
 	<div class="row">
