@@ -1,3 +1,4 @@
+
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -43,7 +44,6 @@
 		)); ?>
 	</div>
 	</div><!-- mainmenu -->
-	
 	<div class="middle_bar">
 		<div class="left_column">
 			<div class="noticias">
@@ -51,13 +51,7 @@
 
 			</div>
 		</div>
-		<div class="right_column">
-			<div class="social">
-			    <a target="_blank" href="https://twitter.com/cp2interativa"><img src="http://www.radiocp2interativa.com.br/wp-content/themes/blankslate/img/twitter_icon.png" alt="Twitter Radio Interativa"/></a>
-			    <a target="_blank" href="https://www.facebook.com/cp2interativa"><img src="http://www.radiocp2interativa.com.br/wp-content/themes/blankslate/img/facebook_icon.png" alt="Facebook Radio Interativa"/></a>
-			    <a target="_blank" href="https://www.youtube.com/channel/UC0qOMx4D_4nFe-6m-syQ7Hg"><img src="http://www.radiocp2interativa.com.br/wp-content/themes/blankslate/img/youtube_icon.png" alt="Youtube Radio Interativa"/></a>
-			</div>
-		</div>
+	<?php include_once("sidebar.php"); ?>
 
 	<div class="clear"></div>
 
