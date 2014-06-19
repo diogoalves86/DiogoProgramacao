@@ -1,11 +1,11 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 /*
 PHP Page Reader - Developed by Diogo Alves
 This is the class which verify if user system has requirements to run PHP Page Reader.
 
  */
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 class Run
 {
@@ -27,6 +27,8 @@ class Run
 		$this->phpVersion = str_replace('.','',$phpVersion);
 		if($this->PHPVersion($this->phpVersion) && $this->IsCurl())
 			return true;
+		else
+			return false;
 	}
 	private function PHPVersion($phpVersion){
 		if($phpVersion < 402){
