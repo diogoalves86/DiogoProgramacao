@@ -945,3 +945,11 @@ Stack trace:
 REQUEST_URI=/DiogoProgramacao/InterativaCPII/index.php/site/login
 HTTP_REFERER=http://localhost/DiogoProgramacao/InterativaCPII/index.php/site/login
 ---
+2014/06/18 22:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "]post".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController(']post')
+#1 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/DiogoProgramacao/InterativaCPII/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DiogoProgramacao/InterativaCPII/index.php/%5Dpost/
+---
