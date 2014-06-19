@@ -4,20 +4,14 @@ class ReadPage
 {
 	public $url;
 
-	public function Start(){
+	public function GetFile(){
 		$run = new Run();
-		if($run->CanRun() === true){
-			$this->Read();	
-			$this->Work();
-		}
+		if($run->CanRun() === true)
+			return $this->Read();
 	}
 
 	public function GetUrl(){
 		return $this->url;
-	}
-
-	private function Work(){
-		echo $this->result;
 	}
 
 	private function Read(){
