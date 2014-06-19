@@ -1,11 +1,20 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+require('protected/Run.class.php');
+
 class ReadPage
 {
 	private $url;
 
-	public static function ini($url){
+	public function __construct($url){
+		$run = new Run();
+		if($run->CanRun() === true)
+			$this->Start($url);	
+	}
+
+
+	private function Start($url){
 		try{
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_URL, $url);
