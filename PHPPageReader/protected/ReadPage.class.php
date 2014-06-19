@@ -17,8 +17,6 @@ class ReadPage
 	private function Read(){
 		try{
 			$curl = curl_init();
-			curl_setopt($curl, CURLOPT_VERBOSE, true);
-		  	curl_setopt($curl, CURLOPT_HEADER, true); 
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
 			curl_setopt($curl, CURLOPT_URL, $this->url);
