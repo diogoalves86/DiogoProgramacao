@@ -9,14 +9,15 @@ class FileControl
 		$this->url = $url;
 		$this->objRead = new ReadPage();
 		$this->objRead->url = $this->url;
-		$this->Slice();
+		$this->Slice("titulo");
 	}
 
-	public function Slice(){
+	public function Slice($classTitle, $classHead = null, $classMessage = null){
 		//<div class = "titulo">
-		$key = "titulo";
-		$delimiter = "&quot;$key&quot;";
+		$title = $classTitle;
+		$delimiter = "&quot;$title&quot;&gt;";
 		$value = htmlspecialchars($this->objRead->GetFile());
+
 		$explode = explode($delimiter, htmlspecialchars($this->objRead->GetFile()));
 		$index = strpos($value, $delimiter);
 		$newValue = substr($value, $index , strlen($delimiter));
