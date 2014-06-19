@@ -14,10 +14,16 @@ class FileControl
 
 	public function Slice(){
 		//<div class = "titulo">
-		$delimiter = '&quot;titulo&quot;';
-		$value = explode($delimiter, htmlspecialchars($this->objRead->GetFile()));
+		$key = "titulo";
+		$delimiter = "&quot;$key&quot;";
+		$value = htmlspecialchars($this->objRead->GetFile());
+		$explode = explode($delimiter, htmlspecialchars($this->objRead->GetFile()));
+		$index = strpos($value, $delimiter);
+		$newValue = substr($value, $index , strlen($delimiter));
+		echo $newValue;
+		 exit();
 		//$position = strpos($value, "class=titul");
-		var_dump($value[1]); exit();
+		var_dump($explode[1]); exit();
 		echo $value;
 	}
 }
