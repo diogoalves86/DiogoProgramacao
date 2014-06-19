@@ -16,6 +16,7 @@ class UserIdentity extends CUserIdentity
 	 * @return boolean whether authentication succeeds.
 	 */
 
+	public $errorMessage = "";
 
 	public function authenticate()
 	{
@@ -23,9 +24,9 @@ class UserIdentity extends CUserIdentity
 		$record = User::model()->findByAttributes(array('login'=>$this->username));
 
 		if($record === null){
-			$this->errorCode = self::ERROR_USERNAME_INVALID;
+			$this->errorMessage = "Login ou senha inválidos";
 		} elseif ($record->password !== $this->password){
-			$this->errorCode = self::ERROR_PASSWORD_INVALID;
+			$this->errorMessage = "Login ou senha inválidos";
 		} else {
 			$this->username=$record->login;
 			$this->errorCode=self::ERROR_NONE;
