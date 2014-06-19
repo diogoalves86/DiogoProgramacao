@@ -2,20 +2,25 @@
 require('protected/Run.class.php');
 class ReadPage
 {
-	public $url = "http://google.com/";
+	public $url;
 
-	public function __construct($url){
+	public function Start(){
 		$run = new Run();
-		$this->url = $url;
-		if($run->CanRun() === true)
-			$this->Start($url);	
+		if($run->CanRun() === true){
+			$this->Read();	
+			$this->Work();
+		}
 	}
 
 	public function GetUrl(){
 		return $this->url;
 	}
 
-	private function Start($url){
+	private function Work(){
+		echo $this->result;
+	}
+
+	private function Read(){
 		try{
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_VERBOSE, true);
@@ -23,8 +28,8 @@ class ReadPage
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
 			curl_setopt($curl, CURLOPT_URL, $this->url);
-			$result = curl_exec($curl);
-			var_dump($result);
+			$this->result = curl_exec($curl);
+			return $this->result;
 		}
 		catch(Exception $ex){
 			return $ex->getMessage();
