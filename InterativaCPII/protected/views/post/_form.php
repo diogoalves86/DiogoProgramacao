@@ -1,10 +1,12 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 /* @var $this PostController */
 /* @var $model Post */
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="page">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'post-form',
@@ -19,25 +21,34 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<p>
 		<?php echo $form->labelEx($model,'title'); ?>
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>400)); ?>
 		<?php echo $form->error($model,'title'); ?>
-	</div>
-
-	<div class="row">
+	</p>
+	<p>
+		<?php $this->widget('CMultiFileUpload',
+		 	array(
+				'model'=>$model,
+					'attribute'=>'binaryImage',
+					'accept'=>'jpg|jpeg|png',
+			)); 
+		?>
+	</p>
+	<p>
 		<select name="comboUsers">
 			<?php for ($i=0; $i < count($users); $i++):?>
 				<option value="<?=$users[$i]['id']; ?>"><?=$users[$i]['name']; ?></option>
 			<?php endfor; ?>
 		</select>
-	</div>
+	</p>
 
-	<div class="row">
+	<p>
 		<?php echo $form->labelEx($model,'message'); ?>
+		<br>
 		<?php echo $form->textArea($model,'message',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'message'); ?>
-	</div>
+	</p>
 	
 
 	<div class="row buttons">

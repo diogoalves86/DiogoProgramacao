@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 class PostController extends Controller
 {
 	/**
@@ -74,6 +75,7 @@ class PostController extends Controller
 			$model->attributes=$_POST['Post'];
 			$model->setAttribute('idUser', $_POST['comboUsers']);
 			$model->setAttribute('creationTime', date("Y-m-d H:i:s"));
+			$this->savePostImage($model);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -185,4 +187,16 @@ class PostController extends Controller
 		}
 		return $userList;
 	}
+
+	private function savePostImage($model)
+	{
+		$img = new Image;
+		$img->binaryImage = CUploadedFile::getInstance($model, 'binaryImage');		
+		if ($img->binaryImage->saveAs(Yii::app()->basePath.'/../images/static/establishments/' . $img->tratarNome($model->id)))
+		{
+			$model->setAttribute('idImage', $img->changeName($model->id));
+			$model->save();
+		}
+	}
+
 }
