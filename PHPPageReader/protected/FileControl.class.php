@@ -27,7 +27,7 @@ class FileControl
 		$newValue = substr($initialHTML, ($indexOfContainerTitle + strlen($delimiterContainerTitle)));
 		
 		var_dump($newValue); echo "<br><br><br><br>";
-		preg_match_all("/&lt;a href=&quot;.*&quot/", $newValue, $matches);
+		preg_match_all("/&lt;".$cssSelectorOfContainerTitle." class=&quot;".$cssClassOfContainerTitle."&quot;&gt;(?s).+/", $initialHTML, $matches);
 		var_dump($matches);
 		exit();
 	}

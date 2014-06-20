@@ -12,7 +12,8 @@ $this->menu=array(
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>
+<div class="page">
+	<h3>Cadastrar postagem</h3>
 
-<h1>Create Post</h1>
-
-<?php $this->renderPartial('_form', array('model'=>$model, 'users'=>$users)); ?>
+	<?php $this->renderPartial('_form', array('model'=>$model, 'users'=>$users)); ?>
+</div>
