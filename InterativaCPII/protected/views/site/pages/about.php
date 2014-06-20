@@ -6,7 +6,8 @@ $this->breadcrumbs=array(
 	'About',
 );
 ?>
-<h1>About</h1>
+<div class="page">
+	<h3>Sobre Nós</h3>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+	<p>Texto com a história da rádio.</p>
+</div>
