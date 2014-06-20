@@ -9,23 +9,38 @@ class FileControl
 		$this->url = $url;
 		$this->objRead = new ReadPage();
 		$this->objRead->url = $this->url;
-		$this->Slice("titulo");
+		$this->GetLinksOfArticle("div", "titulo");
 	}
 
-	public function Slice($classTitle, $classHead = null, $classMessage = null){
+	private function GetLinksOfArticle($cssSelectorOfContainerTitle, $cssClassOfContainerTitle, $classHead = null, $classMessage = null){
 		//<div class = "titulo">
-		$title = $classTitle;
-		$delimiter = "&quot;$title&quot;&gt;";
-		$value = htmlspecialchars($this->objRead->GetFile());
+		$delimiterContainerTitle = "&quot;$cssClassOfContainerTitle&quot;&gt;";
+		$initialHTML = htmlspecialchars($this->objRead->GetFile());
+		$linkTag = "href=&quot;";
+		$indexOfContainerTitle = strpos($initialHTML, $delimiterContainerTitle);
 
-		$explode = explode($delimiter, htmlspecialchars($this->objRead->GetFile()));
-		$index = strpos($value, $delimiter);
-		$newValue = substr($value, $index , strlen($delimiter));
-		echo $newValue;
-		 exit();
-		//$position = strpos($value, "class=titul");
-		var_dump($explode[1]); exit();
-		echo $value;
+		// Get the index of the seletor's end.</seletor>
+		//var_dump($endTagPosition); exit();
+		var_dump($initialHTML); echo "<br><br><br><br>";
+
+		$newValue = substr($initialHTML, ($indexOfContainerTitle + strlen($delimiterContainerTitle)));
+		$indexOfLinkTag = strpos($newValue, $linkTag);
+
+		$href = substr($newValue, ($indexOfLinkTag + (strlen($linkTag) - 1)), strpos($newValue, "/&quot;&gt;"));
+		var_dump($href); echo "<br><br><br><br>";
+
+		exit();
+
+		$getLinkTag = explode("&lt;a href=&quot;", $newValue);
+
+		$endLinkTagPosition = strpos($getLinkTag[1], "/&quot;&gt;");
+
+		$explodeLinkTag = substr($getLinkTag[1], strlen($getLinkTag[1]), $endLinkTagPosition);
+
+		var_dump($explodeLinkTag); echo "<br><br><br><br>";
+		var_dump($getLinkTag); exit();
+		//$position = strpos($initialHTML, "class=titul");
+		echo $initialHTML;
 	}
 }
 ?>
