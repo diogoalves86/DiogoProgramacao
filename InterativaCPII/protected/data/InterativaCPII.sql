@@ -1,0 +1,103 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 20, 2014 at 10:17 PM
+-- Server version: 5.5.37-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `InterativaCPII`
+--
+CREATE DATABASE IF NOT EXISTS `InterativaCPII` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `InterativaCPII`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Post`
+--
+
+DROP TABLE IF EXISTS `Post`;
+CREATE TABLE IF NOT EXISTS `Post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idUser` int(11) NOT NULL,
+  `idImage` varchar(400) NOT NULL,
+  `title` varchar(400) NOT NULL,
+  `message` text NOT NULL,
+  `creationTime` datetime NOT NULL,
+  `updateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idUser` (`idUser`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Truncate table before insert `Post`
+--
+
+TRUNCATE TABLE `Post`;
+--
+-- Dumping data for table `Post`
+--
+
+INSERT INTO `Post` (`id`, `idUser`, `idImage`, `title`, `message`, `creationTime`, `updateTime`) VALUES
+(7, 2, 'http://www.radiocp2interativa.com.br/wp-content/uploads/2014/06/ditadura.jpg', 'teste editado', 'teste editado', '2014-06-17 23:53:27', '2014-06-18 03:31:14'),
+(8, 3, '', 'diogo', 'diogo', '2014-06-18 00:03:29', '2014-06-18 03:03:29'),
+(9, 3, '', 'kkk', 'lll', '2014-06-20 01:46:55', '2014-06-20 04:46:55'),
+(10, 2, '', 'll', 'll', '2014-06-20 02:55:59', '2014-06-20 05:55:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User`
+--
+
+DROP TABLE IF EXISTS `User`;
+CREATE TABLE IF NOT EXISTS `User` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(300) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `login` varchar(400) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `creationTime` datetime NOT NULL,
+  `updateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Truncate table before insert `User`
+--
+
+TRUNCATE TABLE `User`;
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`id`, `name`, `email`, `login`, `password`, `creationTime`, `updateTime`) VALUES
+(2, 'teste', 'etste', 'et', 'et', '2014-06-05 23:30:13', '2014-06-06 02:30:13'),
+(3, 'Diogo Alves', 'diogoalvessilva86@gmail.com', 'diogoalves', 'diogoalves', '0000-00-00 00:00:00', '2014-06-18 02:44:37'),
+(4, 'kk', 'kkk', 'kkk', 'kkk', '2014-06-06 00:00:00', '2014-06-18 02:44:42');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Post`
+--
+ALTER TABLE `Post`
+  ADD CONSTRAINT `fk_Post_id_User_id` FOREIGN KEY (`idUser`) REFERENCES `User` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
