@@ -12,7 +12,7 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', function ($scope, $http) {
 	$http({method:"GET", url: "http://localhost/HomePersonare/api/get_recent_posts/"})
 		.success(function (data, headers){
-			$scope.data = JSON.parse(data);
+			$scope.data = data;
 			$scope.titlePost = $scope.data.post.title;
 		})
 		.error(function (data){
