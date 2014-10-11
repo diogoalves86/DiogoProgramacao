@@ -17,19 +17,8 @@ use Yii;
  *
  * @property User $idUser0
  */
-class Post extends \yii\db\ActiveRecord
+class Post extends \yii\base\Model
 {
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return 'Post';
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -55,13 +44,5 @@ class Post extends \yii\db\ActiveRecord
             'creationTime' => 'Creation Time',
             'updateTime' => 'Update Time',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdUser0()
-    {
-        return $this->hasOne(User::className(), ['id' => 'idUser']);
     }
 }
