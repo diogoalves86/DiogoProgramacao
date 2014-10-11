@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\components as Components;
 
 /**
  * This is the model class for table "Post".
@@ -33,16 +34,23 @@ class Post extends \yii\base\Model
     /**
      * @inheritdoc
      */
+    
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
             'idUser' => 'Id User',
             'idImage' => 'Id Image',
-            'title' => 'Title',
-            'message' => 'Message',
-            'creationTime' => 'Creation Time',
-            'updateTime' => 'Update Time',
+            'title' => 'Titulo',
+            'message' => 'Conteúdo',
+            'creationTime' => 'Data de publicação',
+            'updateTime' => 'Data de atualização',
         ];
+    }
+
+    public function convertJSONData(){
+        $JsonClass = new Components\WordpressJSONData('http://www.radiocp2interativa.com.br/api/get_recent_posts/');
+        $jsonData = json_decode($JsonClass->getRecentPosts());
+        return $jsonData;
     }
 }

@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+var_dump($posts); 
 ?>
 <h1>post/index</h1>
 
