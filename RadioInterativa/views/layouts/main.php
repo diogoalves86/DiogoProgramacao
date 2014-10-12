@@ -96,7 +96,8 @@ AppAsset::register($this);
                     <div class="noticias">
                         <?=$content; ?>
                     </div>
-
+                </div>
+                
                 <div class="right_column">
                     <div class="social">
                         <a target="_blank" href="https://twitter.com/cp2interativa"><img src="<?php echo 'http://www.radiocp2interativa.com.br/wp-content/themes/blankslate'; ?>/img/twitter_icon.png" alt="Twitter Radio Interativa"/></a>
@@ -114,5 +115,8 @@ AppAsset::register($this);
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
     <?php $this->endBody() ?>
 <?php $this->endPage() ?>
