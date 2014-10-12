@@ -11,18 +11,16 @@ use app\assets\AppAsset;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="utf-8"/>
-    <title>Radio CP2 InterAtiva</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo 'get_stylesheet_uri'; ?>" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <?= Html::csrfMetaTags() ?>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="<?php echo 'http://www.radiocp2interativa.com.br/wp-content/themes/blankslate'; ?>/js/jquery.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <title><?= Html::encode($this->title) ?></title>
     <script>
         $(document).ready(function () {
             $('#s').keyup(function () {
@@ -64,10 +62,6 @@ AppAsset::register($this);
       ga('send', 'pageview');
 
     </script>
-        <meta charset="<?= Yii::$app->charset ?>"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
 <?php $this->head() ?>
 
 <?php $this->beginBody() ?>
@@ -97,7 +91,7 @@ AppAsset::register($this);
                         <?=$content; ?>
                     </div>
                 </div>
-                
+
                 <div class="right_column">
                     <div class="social">
                         <a target="_blank" href="https://twitter.com/cp2interativa"><img src="<?php echo 'http://www.radiocp2interativa.com.br/wp-content/themes/blankslate'; ?>/img/twitter_icon.png" alt="Twitter Radio Interativa"/></a>
