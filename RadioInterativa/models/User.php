@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
     public $id;
     public $username;
@@ -26,6 +26,19 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'accessToken' => '101-token',
         ],
     ];
+
+    public function validateUser($username, $password){
+        $User = UserData::find("login='".$username."'");
+        if($User !== null && $User->password === $password){
+            $this->id = $User->id;
+            $this->username = $User->login;
+            $this->password = $User->password;
+            return true;
+        }
+        else
+            return false;
+
+    }
 
     /**
      * @inheritdoc
