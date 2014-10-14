@@ -109,6 +109,8 @@ AppAsset::register($this);
                         </div>
                     </div>
                 </div>
+                <div style="clear:both"></div>
+
             </div>
 
         </div>
