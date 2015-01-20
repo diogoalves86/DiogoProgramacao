@@ -1,4 +1,0 @@
-Isso é teste
-EDITADO
-Segunda Edição
-var_dump($teste); exit;
