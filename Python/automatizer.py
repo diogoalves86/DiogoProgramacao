@@ -32,22 +32,20 @@ class Automatizer:
         self.arquivos = self.processa_texto_por_string("modified:  ")
         for arquivo in self.arquivos:
             print("Processando arquivo: %s" % arquivo)
-            processo = self.executa_comando("git diff %s" % arquivo)
+            self.processo = self.executa_comando("git diff %s" % arquivo)
+            if self.processo == "":
+                self.processo = self.executa_comando("git diff --cached %s" % arquivo)
 
-            if processo == "":
-                processo = self.executa_comando("git diff --cached %s" % arquivo)
-
-            if "var_dump(" in processo:
+            if "var_dump(" in self.processo:
                 print("Foi detectado um var_dump() no seu código!")
                 print("Estas alterações ainda não foram salvas, atente-se para alterá-las antes de commitar!")
+                print("Arquivo onde foi entrado o erro %s processado" % arquivo)
                 print("COMANDO DIGITADO: \"%s\". OUTPUT SEGUE ABAIXO: \n" % self.comando)
-                print(processo + "\n")
-                print("Arquivo %s processado" % arquivo)
+                print(self.processo + "\n")
                 print("Aplicação encerrada.")
                 exit()
             else:
-                #resposta = input("Não foi encontrado var_dump() no seu código, deseja commitá-lo ? (s) ou (n)")
-                return False
+                print("Arquivo %s OK!")
 
 
     def verifica_commit(self):
