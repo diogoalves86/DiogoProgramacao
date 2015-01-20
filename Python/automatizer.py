@@ -4,7 +4,7 @@
 __author__ = 'Diogo Alves'
 __description__ = "Este script foi criado com o intuito de facilitar e automatizar algumas tarefas diárias minhas (Diogo Alves)"
 
-import subprocess
+import subprocess, os
 
 class Colors:
     #Classe onde ficarão as cores segundo o padrão ANSI.
@@ -54,11 +54,12 @@ class Automatizer:
             if "var_dump(" in self.processo:
                 print("Foi detectado um var_dump() no seu código!")
                 print("Estas alterações ainda não foram salvas, atente-se para alterá-las antes de commitar!")
-                print("Arquivo onde foi entrado o erro %s" % arquivo)
+                print("Arquivo onde foi encontrado o erro %s" % arquivo)
                 print("COMANDO DIGITADO: \"%s\". OUTPUT SEGUE ABAIXO: \n" % self.comando)
-                print(self.processo + "\n")
+                os.system(self.comando)
+                print("--------------------------------------------------------------------------------------------------------------------------")
             else:
-                print(self.Colors.VERDE+"Arquivo %s OK!" % arquivo + '\033[0m')
+                print("Arquivo %s OK!" % arquivo)
 
 
     def verifica_commit(self):
@@ -67,6 +68,8 @@ class Automatizer:
             print("""Atente-se para corrigi-lo! Segue abaixo o commit para verificar e corrigir.
             Commit Hash: %s
                   """ % self.commitHash)
+            os.system(self.comando + self.commitHash)
+            print("--------------------------------------------------------------------------------------------------------------------------")
         else:
             print("O seu código não apresenta var_dump()")
 
