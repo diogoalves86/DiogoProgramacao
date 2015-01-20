@@ -1,1 +1,2 @@
-kkkkk
+kkkkkkkkk
+var_dump($aaa); exit();
