@@ -4,24 +4,9 @@
 __author__ = 'Diogo Alves'
 __description__ = "Este script foi criado com o intuito de facilitar e automatizar algumas tarefas diárias minhas (Diogo Alves)"
 
-import subprocess, os
-
-class Colors:
-    #Classe onde ficarão as cores segundo o padrão ANSI.
-    VERDE = "\033[0;32m"
-    PRETO = "\030[0;32m"
-    VERMELHO = "\031[0;32m"
-    VERDE = '\032[0;32m'
-    AMARELO = "\033[0;32m"
-    AZUL = "\034[0;32m"
-    PURPIRINA = "\035[0;32m"
-    CIANO = "\036[0;32m"
-    BRANCO = "\037[0;32m"
+import subprocess, os, argparse
 
 class Automatizer:
-    def __init__(self):
-        self.Colors = Colors()
-
     def altera_comando(self, novoValor):
         self.comando = novoValor
 
@@ -61,7 +46,6 @@ class Automatizer:
             else:
                 print("Arquivo %s OK!" % arquivo)
 
-
     def verifica_commit(self):
         if "var_dump(" in self.processo:
             print("Foi detectado uma função var_dump() no seu ultimo commit.")
@@ -82,7 +66,34 @@ class Automatizer:
         self.processo = self.executa_comando("git show %s" % self.commitHash)
         self.verifica_commit()
 
+    def personareportal_git_master_update(self, novoBranch=None):
+        self.executa_comando("cd ~/devel/personare/portal/workcopy")
+        print("Acessando diretório WorkCopy Personare...")
+        self.executa_comando("git checkout master")
+        print("Fazendo checkout para o branch \"master\"...")
+        self.executa_comando("git fetch")
+        print("Fazendo o fetch para pegar os novos branchs criados")
+        self.executa_comando("git pull origin master")
+        print("Fazendo pull da última versão do branch \"master\"...")
+        if novoBranch != None:
+            self.executa_comando("git checkout -b %s" % novoBranch)
+        print("Todos os passos foram realizados com sucesso, até mais!")
 
-automatizer = Automatizer()
-automatizer.var_dump_finder()
+class Cliente:
+    def __init__(self):
+        parse = argparse.ArgumentParser(prog="Automatizer",
+                                        description="Esse é o aplicativo automatizador de tarefas",
+                                        usage="python ./automatizer.py [OPTIONS]")
+        parse.add_argument("--varDumpFinder", help="Verifica ocorrências de var_dump no código", action="store", type=bool, default=True)
+        parse.add_argument("--gitPersonarePortal", help="Acessa o branch master e faz o pull dele.", action="store", type=bool, default=True)
+        self.args = parse.parse_args()
+        self.automatizer = Automatizer()
 
+    def processa_requesicao(self):
+        if self.args.varDumpFinder:
+            self.automatizer.var_dump_finder()
+        elif self.args.varDumpFinder:
+            self.automatizer.personareportal_git_master_update()
+
+programa = Cliente()
+programa.processa_requesicao()
