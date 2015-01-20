@@ -6,7 +6,22 @@ __description__ = "Este script foi criado com o intuito de facilitar e automatiz
 
 import subprocess
 
+class Colors:
+    #Classe onde ficarão as cores segundo o padrão ANSI.
+    VERDE = "\033[0;32m"
+    PRETO = "\030[0;32m"
+    VERMELHO = "\031[0;32m"
+    VERDE = "\032[0;32m"
+    AMARELO = "\033[0;32m"
+    AZUL = "\034[0;32m"
+    PURPIRINA = "\035[0;32m"
+    CIANO = "\036[0;32m"
+    BRANCO = "\037[0;32m"
+
 class Automatizer:
+    def __init__(self):
+        self.Colors = Colors()
+
     def altera_comando(self, novoValor):
         self.comando = novoValor
 
@@ -37,15 +52,15 @@ class Automatizer:
                 self.processo = self.executa_comando("git diff --cached %s" % arquivo)
 
             if "var_dump(" in self.processo:
-                print("Foi detectado um var_dump() no seu código!")
+                print(self.Colors.VERDE+"Foi detectado um var_dump() no seu código! ", "\033[0m")
                 print("Estas alterações ainda não foram salvas, atente-se para alterá-las antes de commitar!")
-                print("Arquivo onde foi entrado o erro %s processado" % arquivo)
+                print("Arquivo onde foi entrado o erro %s" % arquivo)
                 print("COMANDO DIGITADO: \"%s\". OUTPUT SEGUE ABAIXO: \n" % self.comando)
                 print(self.processo + "\n")
                 print("Aplicação encerrada.")
                 exit()
             else:
-                print("Arquivo %s OK!")
+                print(self.Colors.VERDE+"Arquivo %s OK!" % arquivo + "\033[0m")
 
 
     def verifica_commit(self):
