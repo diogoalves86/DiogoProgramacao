@@ -6,7 +6,7 @@ __description__ = "Este script foi criado com o intuito de facilitar e automatiz
 
 import subprocess
 
-class VarDumper:
+class Automatizer:
     def altera_comando(self, novoValor):
         self.comando = novoValor
 
@@ -40,6 +40,6 @@ class VarDumper:
         self.verifica_commit()
 
 
-verificaVarDamp = VarDumper()
-verificaVarDamp.var_dump_finder()
+automatizer = Automatizer()
+automatizer.var_dump_finder()
 
