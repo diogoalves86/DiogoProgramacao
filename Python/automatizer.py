@@ -11,7 +11,7 @@ class Colors:
     VERDE = "\033[0;32m"
     PRETO = "\030[0;32m"
     VERMELHO = "\031[0;32m"
-    VERDE = "\032[0;32m"
+    VERDE = '\032[0;32m'
     AMARELO = "\033[0;32m"
     AZUL = "\034[0;32m"
     PURPIRINA = "\035[0;32m"
@@ -52,15 +52,13 @@ class Automatizer:
                 self.processo = self.executa_comando("git diff --cached %s" % arquivo)
 
             if "var_dump(" in self.processo:
-                print(self.Colors.VERDE+"Foi detectado um var_dump() no seu código! ", "\033[0m")
+                print("Foi detectado um var_dump() no seu código!")
                 print("Estas alterações ainda não foram salvas, atente-se para alterá-las antes de commitar!")
                 print("Arquivo onde foi entrado o erro %s" % arquivo)
                 print("COMANDO DIGITADO: \"%s\". OUTPUT SEGUE ABAIXO: \n" % self.comando)
                 print(self.processo + "\n")
-                print("Aplicação encerrada.")
-                exit()
             else:
-                print(self.Colors.VERDE+"Arquivo %s OK!" % arquivo + "\033[0m")
+                print(self.Colors.VERDE+"Arquivo %s OK!" % arquivo + '\033[0m')
 
 
     def verifica_commit(self):
