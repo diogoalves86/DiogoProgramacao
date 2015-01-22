@@ -84,15 +84,15 @@ class Cliente:
         parse = argparse.ArgumentParser(prog="Automatizer",
                                         description="Esse é o aplicativo automatizador de tarefas",
                                         usage="python ./automatizer.py [OPTIONS]")
-        parse.add_argument("--varDumpFinder", help="Verifica ocorrências de var_dump no código", action="store", type=bool, default=True)
-        parse.add_argument("--gitPersonarePortal", help="Acessa o branch master e faz o pull dele.", action="store", type=bool, default=True)
+        parse.add_argument("--varDumpFinder", help="Verifica ocorrências de var_dump no código", action="store", type=bool, required=False)
+        parse.add_argument("--gitPersonarePortal", help="Acessa o branch master e faz o pull dele.", action="store", type=bool, required=False)
         self.args = parse.parse_args()
         self.automatizer = Automatizer()
 
     def processa_requesicao(self):
-        if self.args.varDumpFinder:
+        if self.args.varDumpFinder == True:
             self.automatizer.var_dump_finder()
-        elif self.args.varDumpFinder:
+        if self.args.gitPersonarePortal == True :
             self.automatizer.personareportal_git_master_update()
 
 programa = Cliente()
