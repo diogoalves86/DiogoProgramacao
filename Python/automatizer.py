@@ -4,7 +4,7 @@
 __author__ = 'Diogo Alves'
 __description__ = "Este script foi criado com o intuito de facilitar e automatizar algumas tarefas diárias minhas (Diogo Alves)"
 
-import subprocess, os, argparse
+import subprocess, os, argparse, sys
 
 class Automatizer:
     def altera_comando(self, novoValor):
@@ -43,6 +43,7 @@ class Automatizer:
                 print("COMANDO DIGITADO: \"%s\". OUTPUT SEGUE ABAIXO: \n" % self.comando)
                 os.system(self.comando)
                 print("--------------------------------------------------------------------------------------------------------------------------")
+                sys.exit(1)
             else:
                 print("Arquivo %s OK!" % arquivo)
 
@@ -54,6 +55,7 @@ class Automatizer:
                   """ % self.commitHash)
             os.system(self.comando + self.commitHash)
             print("--------------------------------------------------------------------------------------------------------------------------")
+            sys.exit(1)
         else:
             print("O seu código não apresenta var_dump()")
 
