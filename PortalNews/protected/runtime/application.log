@@ -1,0 +1,790 @@
+2014/07/02 21:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#3 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PortalNews/index.php/administrador/create
+---
+2014/07/02 21:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoria/create".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('categoria/creat...')
+#1 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PortalNews/index.php/categoria/create
+---
+2014/07/02 22:30:16 [error] [exception.CException] exception 'CException' with message 'Property "Administrador.name" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /var/www/html/yii/framework/base/CModel.php(596): CActiveRecord->__get('name')
+#2 /var/www/html/PortalNews/protected/views/noticia/_form.php(25): CModel->offsetGet('name')
+#3 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/P...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/P...', Array, true)
+#5 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/P...', Array, true)
+#6 /var/www/html/PortalNews/protected/views/noticia/create.php(18): CController->renderPartial('_form', Array)
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/P...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/P...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/P...', Array, true)
+#10 /var/www/html/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /var/www/html/PortalNews/protected/controllers/NoticiaController.php(82): CController->render('create', Array)
+#12 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): NoticiaController->actionCreate()
+#13 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#23 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/08/02 13:54:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('exibeNoticia')
+#9 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/exibeNo...')
+#10 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/exibeNoticia
+---
+2014/09/06 19:24:48 [error] [exception.CException] exception 'CException' with message 'Property "Administrador.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/PortalNews/protected/components/UserIdentity.php(25): CActiveRecord->__get('password')
+#2 /var/www/html/PortalNews/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/PortalNews/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PortalNews/index.php/site/login
+HTTP_REFERER=http://localhost/PortalNews/index.php/site/login
+---
+2014/09/06 19:25:31 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._id" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/PortalNews/protected/components/UserIdentity.php(28): CComponent->__set('_id', '1')
+#1 /var/www/html/PortalNews/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/PortalNews/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PortalNews/index.php/site/login
+HTTP_REFERER=http://localhost/PortalNews/index.php/site/login
+---
+2014/09/06 19:26:14 [error] [exception.CException] exception 'CException' with message 'Property "Administrador.name" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /var/www/html/PortalNews/protected/components/UserIdentity.php(32): CActiveRecord->__get('name')
+#2 /var/www/html/PortalNews/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/PortalNews/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PortalNews/index.php/site/login
+HTTP_REFERER=http://localhost/PortalNews/index.php/site/login
+---
+2014/09/06 20:08:55 [error] [php] array_map(): Argument #2 should be an array (/var/www/html/yii/framework/web/auth/CAccessControlFilter.php:115)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#4 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#5 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 20:10:09 [error] [php] array_map(): Argument #2 should be an array (/var/www/html/yii/framework/web/auth/CAccessControlFilter.php:115)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#4 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#5 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 20:12:05 [error] [php] array_map(): Argument #2 should be an array (/var/www/html/yii/framework/web/auth/CAccessControlFilter.php:115)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#4 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#5 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 20:14:05 [error] [php] array_map(): Argument #2 should be an array (/var/www/html/yii/framework/web/auth/CAccessControlFilter.php:115)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#4 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#5 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 20:16:20 [error] [php] array_map(): Argument #2 should be an array (/var/www/html/yii/framework/web/auth/CAccessControlFilter.php:115)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#1 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#4 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#5 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 20:16:59 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:17:30 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:18:07 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:19:02 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:19:36 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:19:48 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:21:29 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:22:04 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:25:45 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:27:20 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:29:36 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:29:53 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "pertenceAoNivel".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('pertenceAoNivel', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->pertenceAoNivel('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:33:33 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:38:31 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:40:52 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:41:58 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:41:59 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:42:00 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 20:42:00 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:07:05 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:08:13 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:11:22 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:12:32 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:13:48 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:16:31 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "isInRole".' in /var/www/html/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CComponent->__call('isInRole', Array)
+#1 /var/www/html/yii/framework/base/CComponent.php(612) : eval()'d code(1): CWebUser->isInRole('ADMIN')
+#2 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('Yii::app()->use...', Array)
+#4 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(NoticiaController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#14 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:19:25 [error] [php] Use of undefined constant ADMIN - assumed 'ADMIN' (/var/www/html/PortalNews/protected/components/ManageLevel.php:10)
+Stack trace:
+#0 /var/www/html/yii/framework/base/CComponent.php(612): eval()
+#1 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(392): CAccessRule->evaluateExpression()
+#2 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched()
+#3 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed()
+#4 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter()
+#5 /var/www/html/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#7 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/yii/framework/web/CController.php(265): NoticiaController->runActionWithFilters()
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): NoticiaController->run()
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/PortalNews/index.php(13): CWebApplication->run()
+REQUEST_URI=/PortalNews/index.php/noticia/create
+in /var/www/html/PortalNews/protected/components/ManageLevel.php (10)
+in /var/www/html/PortalNews/protected/components/UserLevel.php (9)
+in /var/www/html/PortalNews/index.php (13)
+2014/09/06 21:21:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+HTTP_REFERER=http://localhost/PortalNews/index.php/site/login
+---
+2014/09/06 21:47:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+---
+2014/09/06 21:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "noticiia/create".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticiia/create')
+#1 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PortalNews/index.php/noticiia/create
+---
+2014/09/06 21:54:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/PortalNews/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PortalNews/index.php/noticia/create
+HTTP_REFERER=http://localhost/PortalNews/index.php/site/login
+---
